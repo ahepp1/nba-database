@@ -1,17 +1,17 @@
-﻿season,team_name,W,L,SRS,pace,ortg,drtg,Top WS,conference,playoffs,team
-2019/2020,Brooklyn Nets,35,37,-1.01,101.4,108.9,109.5,J. Allen (8.2),east,1,BRK
-2019/2020,Toronto Raptors,53,19,5.97,100.9,111.1,105,K. Lowry (7.5),east,1,TOR
-2019/2020,Utah Jazz,44,28,2.52,98.6,112.3,109.9,R. Gobert (10.7),west,1,UTA
-2017/2018,Sacramento Kings,27,55,-6.6,94.9,103.7,111.1,W. Cauley-Stein (3.9),west,0,SAC
-2017/2018,New Orleans Pelicans,48,34,1.48,100.5,109.6,108.3,A. Davis (13.7),west,1,NOP
-2017/2018,Houston Rockets,65,17,8.21,97.6,114.7,106.1,J. Harden (15.4),west,1,HOU
-2012/2013,Cleveland Cavaliers,24,58,-4.87,92.3,104.3,109.4,K. Irving (5.3),east,0,CLE
-2012/2013,Atlanta Hawks,44,38,-0.08,92.6,104.8,104.4,A. Horford (8.8),east,1,ATL
-1999/1900,New Jersey Nets,31,51,-1.18,92.5,105.1,106.3,S. Marbury (7.4),east,0,NJN
-1999/1900,Toronto Raptors,45,37,-0.46,92.5,104.7,104.9,V. Carter (11.8),east,1,TOR
-1999/1900,Utah Jazz,55,27,4.52,89.6,107.3,102.3,K. Malone (15.3),west,1,UTA
-1996/1997,Vancouver Grizzlies,14,68,-10.17,88.4,100.3,111.8,G. Anthony (3.5),west,0,VAN
-1996/1997,Dallas Mavericks,24,58,-6.47,89,101.1,108.2,A. Green (4.0),west,0,DAL
-1970/1971,Philadelphia 76ers,47,35,1.81,115.7,98.8,97.5,A. Clark (11.4),east,1,PHI
-1970/1971,New York Knicks,52,30,5.05,112.2,97.8,93.3,W. Frazier (15.6),east,1,NYK
-1970/1971,Boston Celtics,44,38,2.3,120.2,97,95.3,J. Havlicek (12.5),east,0,BOS
+﻿season,team,team_name,W,L,SRS,pace,ortg,drtg,Top WS,conference,playoffs
+2019/2020,BRK,Brooklyn Nets,35,37,-1.01,101.4,108.9,109.5,J. Allen (8.2),east,1
+2019/2020,TOR,Toronto Raptors,53,19,5.97,100.9,111.1,105,K. Lowry (7.5),east,1
+2019/2020,UTA,Utah Jazz,44,28,2.52,98.6,112.3,109.9,R. Gobert (10.7),west,1
+2017/2018,SAC,Sacramento Kings,27,55,-6.6,94.9,103.7,111.1,W. Cauley-Stein (3.9),west,0
+2017/2018,NOP,New Orleans Pelicans,48,34,1.48,100.5,109.6,108.3,A. Davis (13.7),west,1
+2017/2018,HOU,Houston Rockets,65,17,8.21,97.6,114.7,106.1,J. Harden (15.4),west,1
+2012/2013,CLE,Cleveland Cavaliers,24,58,-4.87,92.3,104.3,109.4,K. Irving (5.3),east,0
+2012/2013,ATL,Atlanta Hawks,44,38,-0.08,92.6,104.8,104.4,A. Horford (8.8),east,1
+1999/2000,NJN,New Jersey Nets,31,51,-1.18,92.5,105.1,106.3,S. Marbury (7.4),east,0
+1999/2000,TOR,Toronto Raptors,45,37,-0.46,92.5,104.7,104.9,V. Carter (11.8),east,1
+1999/2000,UTA,Utah Jazz,55,27,4.52,89.6,107.3,102.3,K. Malone (15.3),west,1
+1996/1997,VAN,Vancouver Grizzlies,14,68,-10.17,88.4,100.3,111.8,G. Anthony (3.5),west,0
+1996/1997,DAL,Dallas Mavericks,24,58,-6.47,89,101.1,108.2,A. Green (4.0),west,0
+1970/1971,PHI,Philadelphia 76ers,47,35,1.81,115.7,98.8,97.5,A. Clark (11.4),east,1
+1970/1971,NYK,New York Knicks,52,30,5.05,112.2,97.8,93.3,W. Frazier (15.6),east,1
+1970/1971,BOS,Boston Celtics,44,38,2.3,120.2,97,95.3,J. Havlicek (12.5),east,0
