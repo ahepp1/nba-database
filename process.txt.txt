@@ -1,0 +1,71 @@
+Our data preprocessing pipeline loads separate csv files as Pandas dataframes in jupyter notebook.
+There we use Pandas built-in functions to concatenate and clean our data into the entities we will later load into SQL.
+Finally we export these entities into singular csv files:
+	
+	- player_stats.csv           | From: https://www.basketball-reference.com/leagues/NBA_2020.html
+	- teams.csv                  | From: https://www.basketball-reference.com/teams/
+	- coaches.csv                | From: https://www.basketball-reference.com/teams/
+	- player_demographics.csv    | From: http://simonwarchol.github.io/NBA-Height-Weight/
+	- awards.csv                 | From: https://en.hispanosnba.com/nba/history/awards-and-honors/season-mvp
+
+For data processing we needed to create five entities:
+- Player stats: stats for every player of every season in NBA history starting at 49/50
+	This was take from https://www.basketball-reference.com/leagues/NBA_1999_totals.html
+
+	From this URL, we could select data to be in csv text form, which we would have to copy into an excel sheet and format using data/text to columns.
+	We do this for every year in the NBA. 
+	Next, in the PartC jupyter notebook, under the 'Player Stats' portion we load all csv's using Pandas and concatenate them into one dataframe.
+	Next we drop unnecessary and extraneous columns such ass:
+		- 'Age', 'GS', 'FG%', 'FT%', '3P%', '2P', '2PA', '2P%', 'eFG%', 'TRB', 'PF', 'Pos'
+
+	Player names are formatted so that a '*' appears if they are a hall of famer, which we removed.
+
+	Finally, we save this final dataframe to a csv file which we will call player_stats.csv
+
+- Teams: stats for every team for every single NBA season like wins, losses, best player, etc:
+	This is from the same website at this URL: https://www.basketball-reference.com/teams/
+	
+	The process for this is similar as above; we copy stats for each team (each team has stats for each of its seasons) and we paste into excel.
+	We format once again using data/text to columns, and load into jupyter notebook using pandas.
+	Once again we concatenate and delete unnecessarry columns such as:
+		- 'Lg', 'W/L%', 'Rel Pace', 'Finish', 'Rel ORtg', 'Rel DRtg', 'Playoffs'
+
+	Unlike before, we have to add the column 'team' which is the abbreviation of the teams name. 
+	Each team in NBA history has a unique abbreviation, whereas they may share names.
+	Furthermore, players in player_stats have the same abbreviations which will link a players season to the team entity in the relational database as a foreign key.
+	We add the team abbreviations by searching for every row featuring a certain "team_name" (the teams full name) and adding a new entry called "team" which contains the abbreviation.
+	We do this for every single team.
+
+	Another issue was that our season column was organized as 2017-18 instead of our preferred 2017/2018, which we had to write a small script for in the notebook.
+
+	Finally we saved this dataframe as a csv called team_stats.csv
+	
+- Coaches: each coach for every season they coached and a team abbreviation to link them to the Teams entity:
+	The Teams entity above contains a column called coaches which we linked to the team abbreviations and to the season.
+	We borred the seasons column and team column from 'Teams' so that we don't reinvent the wheel.
+	Then we remove coaches from the Teams entity 
+
+	We then created this as its own dataframe and exported it to a csv called coaches.csv.
+	
+
+- Player demographics: constant values such as height, weight, birthdate, rookie year for all players in nba history
+	http://simonwarchol.github.io/NBA-Height-Weight/
+	
+	The above URL is from a a project by Simon Warchol and is open source for others to use.
+	It includes several pre-built csv's featuring every single player in NBA history and their heights, weights, positions, rookie years, and birthdates.
+	The csv's are alphabetically organized, for example 'A.csv' includes every player with last name starting with a, etc.
+	We load in every single csv into a jupyter notebook using pandas just like above.
+	We concatenate all of them and remove extraneous columns:	
+		- 'To', 'Colleges'
+
+	This csv also has players in the hall of fame marked with '*', which we once again had to remove.
+
+	Strangely heights for players are listed as 'Jun-6' which translates to 'six foot six inches', or 'May-11' which is 'five foot six inches'.
+	We wrote a script that converts these heights into inches.
+	Once again we save our dataframe as a csv called 'player_demographics.csv'.
+
+- Awards: consists of foreign keys from the player_demographics and coaches entities that represent NBA awards for each season:
+	From https://en.hispanosnba.com/nba/history/awards-and-honors/season-mvp.
+	This website contains every winner of MVP, DPOY, MIP, ROTY, COTY, which we can download into an excel file and use data/ from text to columns.
+	This was then exported to a csv which will be parsed into SQL.
+	The data we got from this URL required no editing or parsing for our purposes.
