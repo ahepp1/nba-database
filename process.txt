@@ -1,3 +1,6 @@
+Alex Hepp, Nico Ivanov
+ahepp1, nivanov4
+
 Our data preprocessing pipeline loads separate csv files as Pandas dataframes in jupyter notebook.
 There we use Pandas built-in functions to concatenate and clean our data into the entities we will later load into SQL.
 Finally we export these entities into singular csv files:

@@ -1,3 +1,7 @@
+-- Alex Hepp, Nico Ivanov
+-- ahepp1, nivanov4
+
+
 -- Creation
 
 create table Award
@@ -69,31 +73,31 @@ foreign key (season, team) references Team(season, team));
 -- Loading
 
 LOAD DATA LOCAL INFILE '/Users/alexanderhepp/Documents/Databases/Project/nba-database/awards.csv'
-INTO TABLE Award 
-FIELDS TERMINATED BY ',' 
+INTO TABLE Award
+FIELDS TERMINATED BY ','
 LINES TERMINATED BY '\n'
 IGNORE 1 ROWS;
 
 LOAD DATA LOCAL INFILE '/Users/alexanderhepp/Documents/Databases/Project/nba-database/team_stats.csv'
-INTO TABLE Team 
-FIELDS TERMINATED BY ',' 
+INTO TABLE Team
+FIELDS TERMINATED BY ','
 LINES TERMINATED BY '\r\n'
 IGNORE 1 ROWS;
 
 LOAD DATA LOCAL INFILE '/Users/alexanderhepp/Documents/Databases/Project/nba-database/player_demographics.csv'
-INTO TABLE Demographic 
-FIELDS TERMINATED BY ',' 
+INTO TABLE Demographic
+FIELDS TERMINATED BY ','
 LINES TERMINATED BY '\n'
 IGNORE 1 ROWS;
 
 LOAD DATA LOCAL INFILE '/Users/alexanderhepp/Documents/Databases/Project/nba-database/player_stats.csv'
-INTO TABLE Stat 
-FIELDS TERMINATED BY ',' 
+INTO TABLE Stat
+FIELDS TERMINATED BY ','
 LINES TERMINATED BY '\r\n'
 IGNORE 1 ROWS;
 
 LOAD DATA LOCAL INFILE '/Users/alexanderhepp/Documents/Databases/Project/nba-database/coaches.csv'
-INTO TABLE Coach 
-FIELDS TERMINATED BY ',' 
+INTO TABLE Coach
+FIELDS TERMINATED BY ','
 LINES TERMINATED BY '\n'
 IGNORE 1 ROWS;
