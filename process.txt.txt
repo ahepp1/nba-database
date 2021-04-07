@@ -63,3 +63,9 @@ For data processing we needed to create five entities:
 	Strangely heights for players are listed as 'Jun-6' which translates to 'six foot six inches', or 'May-11' which is 'five foot six inches'.
 	We wrote a script that converts these heights into inches.
 	Once again we save our dataframe as a csv called 'player_demographics.csv'.
+
+- Awards: consists of foreign keys from the player_demographics and coaches entities that represent NBA awards for each season:
+	From https://en.hispanosnba.com/nba/history/awards-and-honors/season-mvp.
+	This website contains every winner of MVP, DPOY, MIP, ROTY, COTY, which we can download into an excel file and use data/ from text to columns.
+	This was then exported to a csv which will be parsed into SQL.
+	The data we got from this URL required no editing or parsing for our purposes.
