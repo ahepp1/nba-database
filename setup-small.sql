@@ -1,3 +1,7 @@
+-- Alex Hepp, Nico Ivanov
+-- ahepp1, nivanov4
+-- Creation
+
 create table Award
 (season varchar(15),
 mvp varchar(30),
@@ -19,15 +23,15 @@ SRS float,
 pace float,
 ortg float,
 drtg float,
-conference varchar(5),
+topWS varchar(30),
+conference varchar(10),
 playoffs int,
 primary key (season, team),
 foreign key (season) references Award(season));
 
-
 create table Demographic
 (name varchar(30),
-rookie_year int,
+rookie_year year,
 player_position varchar(5),
 height int,
 weight int,
@@ -55,8 +59,44 @@ TOV int,
 PTS int,
 primary key (season, name),
 foreign key (name) references Demographic(name),
-foreign key (season) references Award(season)
-foreign key (team) references Team(team));
+foreign key (season) references Award(season));
 
 create table Coach
-();
+(season varchar(15),
+team varchar(5),
+coach_name varchar(30),
+primary key (season, team),
+foreign key (season, team) references Team(season, team));
+
+-- Loading
+
+LOAD DATA LOCAL INFILE '/Users/alexanderhepp/Documents/Databases/Project/nba-database/smalls/awards_small.csv'
+INTO TABLE Award
+FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS;
+
+
+LOAD DATA LOCAL INFILE '/Users/alexanderhepp/Documents/Databases/Project/nba-database/smalls/team_stats_small.csv'
+INTO TABLE Team
+FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\r\n'
+IGNORE 1 ROWS;
+
+LOAD DATA LOCAL INFILE '/Users/alexanderhepp/Documents/Databases/Project/nba-database/smalls/player_demographics_small.csv'
+INTO TABLE Demographic
+FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS;
+
+LOAD DATA LOCAL INFILE '/Users/alexanderhepp/Documents/Databases/Project/nba-database/smalls/player_stats_small.csv'
+INTO TABLE Stat
+FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\r\n'
+IGNORE 1 ROWS;
+
+LOAD DATA LOCAL INFILE '/Users/alexanderhepp/Documents/Databases/Project/nba-database/smalls/coaches_small.csv'
+INTO TABLE Coach
+FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS;
