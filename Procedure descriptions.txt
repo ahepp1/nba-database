@@ -1,0 +1,45 @@
+<-- Individual Player stats -->
+
+(done) show_player_stats: takes in a player name and category and displays that player's stats per season with their best season in that category listed first 
+
+(done) show_player_stats_total: takes in a player name and shows their career stats
+
+(done) show_player_demographics: takes in a player name and shows their demographics
+
+
+
+<-- Player Comparison Stats -->
+
+	show_category_leaders_all_time_season: takes in a category and displays the best individual seasons in that category of all players	
+
+(done) show_category_leaders_all_time: takes in a category and displays the players with the highest stat in that category (includes averages like points per game and totals like total career points)
+
+(done) show_category_leaders_team: takes in a team and a category and returns the best players on that team in that category (all-time)
+
+(done) show_categor_leaders_season: takes in a season and a category and returns the best players in that season in that category
+
+(done) show_category_leaders_team_season: takes in a team a season and a category and prints every player from that team and their stats with the players with the highest categories listed first
+
+
+
+<-- Individual Team Stats-->
+
+(done) show_team_stats: takes in a team acronym (Lakers: LAL) and a category and displays the teams stats for every season in its existence ordered by the highest occurences of that category
+
+(done) show_team_stats_totals: takes in a team acronym (Lakers: LAL) and displays the teams total stats over its existence
+
+
+
+<-- Team Comparison Stats -->
+
+	show_team_leaders_all_time_season: takes in a category and ranks every team ever (LAL of 1990 and LAL of 1991 are different teams for example) based on that category	
+
+	show_team_leaders_all_time: takes in a category and shows all teams ranked in order of highest value in that category
+	
+	show_team_leaders_season: takes in a season and returns a ranked list of teams in that season based on a category
+
+		
+
+coaches
+
+awards
